@@ -1,3 +1,25 @@
+Hooks.once('init', () => {
+  console.log("AutoTranslate Journal : hook init appelé !");
+  game.settings.register("autotranslate-journal", "deeplApiKey", {
+    name: "Clé API DeepL",
+    hint: "Rentre ta clé API DeepL",
+    scope: "world",
+    config: true,
+    type: String,
+    default: ""
+  });
+  game.settings.register("autotranslate-journal", "targetLang", {
+    name: "Langue cible",
+    hint: "Langue de traduction (ex. FR, EN, ES…)",
+    scope: "world",
+    config: true,
+    type: String,
+    default: "FR"
+  });
+});
+
+// ... LE RESTE DE TON CODE EN DESSOUS ...
+
 // Hooks à surveiller pour D&D5
 const SUPPORTED_SHEETS = [
   'renderJournalSheet',
