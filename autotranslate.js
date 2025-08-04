@@ -1,7 +1,7 @@
 Hooks.once('init', () => {
   game.settings.register("autotranslate-journal", "deeplApiKey", {
     name: "Clé API DeepL",
-    hint: "d2481ce6-3c69-46dd-b212-114c4e014a01:fx",
+    hint: "rentre ta clé API DeepL",
     scope: "world",
     config: true,
     type: String,
